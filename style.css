@@ -1,0 +1,426 @@
+/*CSS styling för alla sidor*/
+body {
+    font-family: "Lora", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+/*CSS styling för framsidan*/
+.page--framsida {
+    background-image: url(bilder/CropNight.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(56, 79, 85);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.page__content--main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5em;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    padding: 10vh;
+}
+
+.info--framsida {
+    background-color: rgb(74 123 121);
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar__logo {
+    margin-bottom: 15px;
+}
+
+.navbar__menu {
+    list-style-type: none;
+}
+
+.navbar__menu a {
+   color: rgb(220 234 178);
+   text-decoration: none;
+   font-size: large;
+}
+
+.navbar__menu__item {
+    margin-bottom: 20px;   
+}
+
+.info {
+    padding: 20px;
+    max-width: 400px;
+}
+
+.info__header {
+    text-align: center;
+    font-weight: normal;
+    font-size: 2em;
+    color: rgb(220 234 178);
+}
+
+.navbar__hamburger {
+    color: rgb(220 234 178);
+    display: none;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.info .info__submit {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(220, 234, 178);
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: rgb(33, 55, 54);
+    cursor: pointer;
+}
+
+/*CSS styling för Om oss*/
+.page--omoss {
+    background-image: url(bilder/tressomoss.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(74 123 121);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.page__cont {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: none;
+}
+
+.navbar--omoss, .navbar--bokarum {
+    padding: 15px 30px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 3;
+}
+
+.navbar--omoss a, .navbar--bokarum a {
+    color: rgb(220 234 178);    
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.page__koncept {
+    font-size: 2rem;
+    color: rgb(220 234 178);
+    margin-top: 160px;
+    font-weight: normal;
+    z-index: 3;
+}
+
+.page__logo--omoss {
+    margin-right: 10px;
+    max-width: 70%;
+    height: auto;
+    margin-top: 100px;
+    z-index: 11;
+}
+
+.page__color-block {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(74 123 121);
+    height: 45%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.page__color-block-text {
+    color: rgb(220 234 178);
+    font-size: 1.5rem; 
+    text-align: left;
+    z-index: 2;
+    max-width: 460px;
+    padding-left: 20px;
+}
+
+.page__color-block-text-right {
+    color: rgb(220 234 178);
+    font-size: 1.5rem;
+    text-align: right;
+    z-index: 2;
+    max-width: 460px;
+    padding-right: 20px
+}
+
+.page__jordklot {
+    max-width: 40%;
+    height: auto;
+    object-fit: contain;
+    z-index: 2;
+    margin-top: -500px;
+}
+
+/*CSS styling för Boka rum*/
+.page--bokarum {
+    background-image: url(bilder/bokarum.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(61, 47, 38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.page__logo--bokarum {
+    position: absolute;
+    top: -36px;
+    max-width: 300px;
+    height: auto;
+}
+
+.page__form-container {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    margin-top: 150px;
+}
+
+.page__catchphrase {
+    color: rgb(220, 234, 178);
+    margin-left: 310px;
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.page__form-color {
+    color: rgb(220, 234, 178);
+    background-color: rgba(220, 234, 178, 0.4);
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.page__form-color h3 {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+legend {
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
+.form--bokarum {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+input[type="text"],
+input[type="email"], 
+input[type="tel"],
+input[type="date"],
+input[type="submit"],
+input[type="room"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(220, 234, 178);
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    color: rgb(34, 57, 56);
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    margin-top: 15px;
+}
+
+/*Media quieries för alla sidor, small screens*/
+@media (max-width: 576px) {
+    .page__content--main {
+        flex-direction: column;
+        gap: 2em;
+        align-items: center;
+        padding-top: 90px;
+        position: relative;
+        width: 100%;
+    }
+
+    .main__content {
+        display: flex;
+        margin: 100px;
+    }
+
+    .navbar--small--screen {
+        background-color: rgb(74 123 121);
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 90px;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .navbar__logo, .page__logo--omoss-nav, .page__logo--bokarum-nav {
+        max-width: 28%;
+        height: auto;
+        display: block;
+        margin-right: 270px;
+    }
+
+    .navbar__logo {
+        margin-top: 13px;
+    }
+
+    .page__logo--bokarum, .page__logo--omoss {
+        display: none;
+    }
+
+    .info {
+        padding: 20px;
+        margin: 0;
+    }
+
+    .navbar {
+        padding: 0;
+    }
+
+    .navbar__hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .navbar__menu, .navbar--omoss a, .navbar--bokarum a {
+        display: none;
+    }
+
+    .navbar--omoss, .navbar--bokarum {
+        padding: 0;
+    }
+
+    .page__logo {
+        width: 90%;
+    }
+
+    .page__jordklot {
+        max-width: 70%;
+        position: absolute;
+        bottom: 85%;
+    }
+
+    .page__koncept {
+        margin-top: 100px;
+        font-size: 3rem;
+        color: rgb(220 234 178);
+    } 
+
+    .form--bokarum {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page__form-container {
+        margin: 0;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="phone"],
+    input[type="date"],
+    input[type="submit"] {
+        padding: 12px;
+        font-size: 18px; 
+    }
+
+    input[type="submit"] {
+        margin-top: 20px;
+    }
+
+    .page__color-block {
+        flex-direction: column;
+        height: 50%;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .page__form-color {
+        width: 90%;
+    }
+
+    .page__color-block-text, .page__color-block-text-right {
+        text-align: center;
+        padding: 10px;
+        flex: 1;
+    }
+
+    legend {
+        padding:  20px 0px 20px 0px;
+    }
+
+    .color-block-text {
+        padding-top: 50px;
+    }
+
+    .page__catchphrase {
+        font-size: 19px;
+        font-weight: normal;
+        margin-left: auto;
+        padding-left: 15px;
+        padding-top: 50px;
+    }
+
+    .info__header {
+        font-size: 1.5em;
+    }
+}
+
+/*Media quieries för alla sidor, big screens*/
+@media (min-width: 576px) {
+    .main__content {
+        display: flex;
+        align-items: center;
+    }
+
+    .page__logo--bokarum-nav {
+        display: none;
+    }
+
+    .page__logo--omoss-nav {
+        display: none;
+    }
+}
