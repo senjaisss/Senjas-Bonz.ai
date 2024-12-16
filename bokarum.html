@@ -23,7 +23,8 @@
     <h2 class="page__catchphrase">Rädda världen, boka ett rum.</h2>
 
     <section class="page__form-color" aria-label="Bokningsformulär"> 
-        
+        <input type="checkbox" id="show-result" class="form-hidden">
+
         <form class="form form--bokarum">
             <fieldset class="form__group form__group--left">
             <legend>Personlig information</legend>
@@ -53,9 +54,15 @@
             <label for="room" class="form__label">Typ av rum</label>
             <input type="text" id="room" name="room" class="form__input" required>
             
-            <input type="submit" value="Boka!" class="form__submit">
+            <label for="show-result" class="form__button">Boka!</label>
             </fieldset>
         </form>
+
+        <section class="result" aria-label="Bokningsresultat">
+            <h3 class="result__title">Tack för din bokning!</h3>
+            <p class="result__description">Varmt välkommen den 25/05/2095! Incheckning kl. 11:00</p>
+            <img src="bilder/02-night.jpg" alt="bild på bokning" class="result__image">
+        </section>
     </section>
 
 </main> 

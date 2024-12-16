@@ -245,7 +245,6 @@ input[type="text"],
 input[type="email"], 
 input[type="tel"],
 input[type="date"],
-input[type="submit"],
 input[type="room"] {
     width: 100%;
     padding: 10px;
@@ -257,8 +256,45 @@ input[type="room"] {
     cursor: pointer;
 }
 
-input[type="submit"] {
-    margin-top: 15px;
+label[for=show-result]{
+    position: relative;
+    top: 35px;
+}
+
+#show-result:checked ~ .result {
+    display: block;
+}
+
+.form__button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(74 123 121);
+    color: white;
+    border: 1px solid rgb(220, 234, 178);
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.form-hidden {
+    display: none;
+}
+
+.result {
+    display: none;
+    margin-top: 20px;
+    padding: 15px;
+    background-color: rgba(220, 234, 178, 0.4);
+    border: 2px solid rgb(220, 234, 178);
+    border-radius: 8px;
+    color: rgb(34, 57, 56);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.result__image {
+    max-width: 500px;
+    border-radius: 2px;
 }
 
 /*Media quieries för alla sidor, small screens*/
@@ -359,14 +395,21 @@ input[type="submit"] {
     input[type="text"],
     input[type="email"],
     input[type="phone"],
-    input[type="date"],
-    input[type="submit"] {
+    input[type="date"] {
         padding: 12px;
         font-size: 18px; 
     }
 
-    input[type="submit"] {
+    label[for=show-result] {
         margin-top: 20px;
+    }
+
+    .result {
+        margin-top: 70px;
+    }
+
+    .result__image {
+        max-width: 300px;
     }
 
     .page__color-block {
@@ -380,6 +423,9 @@ input[type="submit"] {
 
     .page__form-color {
         width: 90%;
+        margin-top: 350px;
+        margin-bottom: 20px;
+        padding-bottom: 65px;
     }
 
     .page__color-block-text, .page__color-block-text-right {
